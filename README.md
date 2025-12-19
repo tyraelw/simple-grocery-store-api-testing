@@ -1,48 +1,43 @@
 # 🛒 Simple Grocery Store API Testing Suite
-
-![Postman](https://img.shields.io/badge/Postman-API%20Testing-orange)
-![JavaScript](https://img.shields.io/badge/JavaScript-Testing-yellow)
-![Newman](https://img.shields.io/badge/Newman-CLI%20Runner-green)
-![API Testing](https://img.shields.io/badge/API-E2E%20Testing-blue)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=postman&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![Newman](https://img.shields.io/badge/Newman-5C5C5C?style=flat&logo=postman&logoColor=white) ![API Testing](https://img.shields.io/badge/API-Testing-blue)
 
 A comprehensive end-to-end API testing suite for a grocery store e-commerce platform. This collection demonstrates complete shopping flow automation including product browsing, cart management, order creation, and authentication workflows.
 
 ## 📋 Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Test Coverage](#test-coverage)
-- [Environment Variables](#environment-variables)
-- [API Endpoints](#api-endpoints)
-- [Running Tests](#running-tests)
-- [Testing Data](#testing-data)
-- [Security Notes](#security-notes)
-- [Troubleshooting](#troubleshooting)
-- [Author](#author)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Test Coverage](#-test-coverage)
+- [Environment Variables](#-environment-variables)
+- [API Endpoints](#-api-endpoints)
+- [Running Tests](#-running-tests)
+- [Testing Data](#-testing-data)
+- [Security Notes](#-security-notes)
+- [Troubleshooting](#-troubleshooting)
+- [Author](#-author)
 
 ## 🎯 Overview
 
-This project provides a complete testing framework for the Simple Grocery Store API, covering the entire e-commerce customer journey from product discovery to order completion. The collection includes 30+ automated tests with dynamic data generation and environment variable management.
+This project provides a complete testing framework for the Simple Grocery Store API, covering the entire e-commerce customer journey from product discovery to order completion. The collection includes 45 automated tests with dynamic data generation and environment variable management.
 
 ## ✨ Features
 
-- **Complete E-commerce Flow:** Tests cover the full shopping experience
-- **Dynamic Authentication:** Automatic client registration with unique email generation
-- **Cart Management:** Create, modify, and manage shopping cart operations
-- **Order Lifecycle:** Complete order creation, retrieval, update, and deletion
-- **Product Catalog:** Comprehensive product browsing with filters
-- **Automated Cleanup:** Validates proper deletion with 404 verification
-- **Environment Management:** Dynamic variable storage for seamless test execution
-- **Extensive Validation:** 30+ test assertions covering all scenarios
+- ✅ **Complete E-commerce Flow** - Tests cover the full shopping experience
+- ✅ **Dynamic Authentication** - Automatic client registration with unique email generation
+- ✅ **Cart Management** - Create, modify, and manage shopping cart operations
+- ✅ **Order Lifecycle** - Complete order creation, retrieval, update, and deletion
+- ✅ **Product Catalog** - Comprehensive product browsing with filters
+- ✅ **Automated Cleanup** - Validates proper deletion with 404 verification
+- ✅ **Environment Management** - Dynamic variable storage for seamless test execution
+- ✅ **Extensive Validation** - 45 test assertions covering all scenarios
 
 ## 🔧 Prerequisites
 
 - **Postman** - Desktop application or web version
 - **Node.js** - For running Newman CLI (optional)
 - **Newman** - Postman's command-line runner (optional)
-
 ```bash
 # Install Newman globally (optional)
 npm install -g newman
@@ -59,7 +54,6 @@ npm install -g newman
 5. Collection will appear in your workspace
 
 ### Option 2: Clone Repository
-
 ```bash
 # Clone the repository
 git clone https://github.com/tyraelw/simple-grocery-store-api-testing.git
@@ -80,7 +74,6 @@ cd simple-grocery-store-api-testing
 6. View detailed test results in the runner
 
 ### Running with Newman (Optional)
-
 ```bash
 # Run the entire collection
 newman run simple-grocery-store-api-collection.json
@@ -149,11 +142,11 @@ The collection uses environment variables for dynamic data management:
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `baseUrl` | API base URL | `https://simple-grocery-store-api.glitch.me` |
-| `cartId` | Shopping cart identifier | Auto-generated |
-| `accessToken` | Authentication token | Auto-generated |
-| `orderId` | Order identifier | Auto-generated |
-| `clientEmail` | Unique client email | `test1234567890@example.com` |
+| baseUrl | API base URL | https://simple-grocery-store-api.glitch.me |
+| cartId | Shopping cart identifier | Auto-generated |
+| accessToken | Authentication token | Auto-generated |
+| orderId | Order identifier | Auto-generated |
+| clientEmail | Unique client email | test1234567890@example.com |
 
 ### Dynamic Variable Generation
 
@@ -219,6 +212,7 @@ The collection is designed to run sequentially as tests depend on previous respo
 ### Individual Request Testing
 
 You can also test individual endpoints, but ensure:
+
 - Cart ID exists for cart operations
 - Access token is generated for order operations
 - Order ID exists for order-specific operations
@@ -236,64 +230,51 @@ All test data is generated dynamically and cleaned up after execution.
 
 ## 🔒 Security Notes
 
-✅ No hardcoded credentials in the collection  
-✅ Access tokens are generated dynamically  
-✅ Email addresses use timestamp for uniqueness  
-✅ Bearer token authentication properly implemented  
-✅ All sensitive data stored in environment variables
+- ✅ No hardcoded credentials in the collection
+- ✅ Access tokens are generated dynamically
+- ✅ Email addresses use timestamp for uniqueness
+- ✅ Bearer token authentication properly implemented
+- ✅ All sensitive data stored in environment variables
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
-#### **Issue:** Tests fail due to missing cart ID
+**Issue:** Tests fail due to missing cart ID  
 **Solution:** Ensure "Create a new cart" request runs first
 
-#### **Issue:** Authentication errors on order endpoints
+**Issue:** Authentication errors on order endpoints  
 **Solution:** Run "Register API Client" to generate fresh access token
 
-#### **Issue:** 404 errors on specific products
+**Issue:** 404 errors on specific products  
 **Solution:** Check product availability with "Get all products" first
 
-#### **Issue:** Rate limiting errors
+**Issue:** Rate limiting errors  
 **Solution:** Add delay between requests in collection runner
 
 ## 📚 Additional Resources
 
-- [Simple Grocery Store API Documentation](https://github.com/vdespa/Postman-Complete-Guide-API-Testing)
+- [Simple Grocery Store API Documentation](https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md)
 - [Postman Learning Center](https://learning.postman.com/)
-- [Newman Documentation](https://github.com/postmanlabs/newman)
+- [Newman Documentation](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/)
 
 ### My Other Testing Projects
 
-- [Cypress E-Commerce Testing](https://github.com/tyraelw/cypress-ecommerce-testing) - End-to-end UI automation with Page Object Model
-- [Trello API Testing Suite](https://github.com/tyraelw/trello-api-testing) - CRUD operations and board management testing
-
-## 🤝 Contributing
-
-This is a portfolio project, but suggestions are welcome! Feel free to:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your improvements
-4. Submit a pull request
-
-## 📜 License
-
-This project is open source and available for educational purposes.
+- [Cypress E-Commerce Testing](link) - End-to-end UI automation with Page Object Model
+- [Trello API Testing Suite](link) - CRUD operations and board management testing
 
 ## 👤 Author
 
 **Isrrael Andres Toro Alvarez**
 
 - GitHub: [@tyraelw](https://github.com/tyraelw)
-- LinkedIn: [Isrrael Toro Alvarez](https://www.linkedin.com/in/isrrael-toro-alvarez-1019a4119/)
-- Email: [tyrael78w@gmail.com](mailto:tyrael78w@gmail.com)
+- LinkedIn: [Isrrael Toro Alvarez](https://linkedin.com/in/your-profile)
+- Email: tyrael78w@gmail.com
 
 ## 📧 Contact
 
-For questions, feedback, or collaboration opportunities, please reach out via [tyrael78w@gmail.com](mailto:tyrael78w@gmail.com)
+For questions, feedback, or collaboration opportunities, please reach out via tyrael78w@gmail.com
 
 ---
 
-⭐ **If you find this project useful, please consider giving it a star on GitHub!**ent testing
+⭐ **If you find this project useful, please consider giving it a star on GitHub!**
