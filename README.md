@@ -260,8 +260,8 @@ All test data is generated dynamically and cleaned up after execution.
 
 ### My Other Testing Projects
 
-- [Cypress E-Commerce Testing](link) - End-to-end UI automation with Page Object Model
-- [Trello API Testing Suite](link) - CRUD operations and board management testing
+- [Cypress E-Commerce Testing](https://github.com/tyraelw/cypress-ecommerce-testing) - End-to-end UI automation with Page Object Model
+- [Trello API Testing Suite](https://github.com/tyraelw/trello-api-testing) - CRUD operations and board management testing
 
 ## 👤 Author
 
